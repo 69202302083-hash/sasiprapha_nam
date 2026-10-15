@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - ศศิประภา เพ็งจันทร์ (นํ้า)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Prompt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fdf8f6',
+                            100: '#f2e8e5',
+                            200: '#e5d0cb',
+                            500: '#c88a75',
+                            600: '#a86550',
+                            800: '#5c3327',
+                            900: '#2d1812',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased selection:bg-brand-200 selection:text-brand-900 min-h-screen flex flex-col justify-between">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-stone-50/80 backdrop-blur-md border-b border-stone-200/60 transition-all">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-tight text-stone-900 hover:text-brand-600 transition">
+                SP<span class="text-brand-500">.</span>
+            </a>
+            <nav class="hidden sm:flex space-x-8 text-sm font-medium text-stone-600">
+                <a href="#about" class="hover:text-brand-600 transition">เกี่ยวกับฉัน</a>
+                <a href="#skills" class="hover:text-brand-600 transition">ความสามารถ</a>
+                <a href="#contact" class="hover:text-brand-600 transition">ช่องทางการติดต่อ</a>
+                <a href="#family" class="hover:text-brand-600 transition">ครอบครัว</a>
+            </nav>
+            <a href="#contact" class="inline-flex items-center justify-center px-4 py-2 text-xs font-semibold tracking-wide text-white bg-stone-900 rounded-full hover:bg-brand-600 transition shadow-sm">
+                ติดต่อฉัน
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-5xl mx-auto px-6 pt-12 pb-16 md:py-20">
+        <div class="grid md:grid-cols-12 gap-12 items-center">
+            <!-- Text Content -->
+            <div class="md:col-span-7 space-y-6 order-2 md:order-1">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100 text-brand-800 text-xs font-medium">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                    สาขา สาธารณสุขชุมชน
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-900 leading-tight tracking-tight">
+                    สวัสดีค่ะ, ฉันชื่อ <br>
+                    <span class="text-brand-600">ศศิประภา เพ็งจันทร์</span>
+                </h1>
+                <p class="text-lg text-stone-600 font-light leading-relaxed">
+                    ชื่อเล่น <strong class="font-medium text-stone-800">"นํ้า"</strong> อายุ 19 ปี มีความสนใจและมุ่งมั่นในการเรียนรู้ด้านสาธารณสุขชุมชน พร้อมนำความรู้และความตั้งใจมาพัฒนาสุขภาพและคุณภาพชีวิตของผู้คนในสังคม
+                </p>
+                <div class="pt-2 flex flex-wrap gap-4">
+                    <a href="#contact" class="px-6 py-3 bg-stone-900 hover:bg-brand-600 text-white rounded-xl font-medium transition shadow-sm flex items-center gap-2 text-sm">
+                        <i data-lucide="mail" class="w-4 h-4"></i> ติดต่อสอบถาม
+                    </a>
+                    <a href="#about" class="px-6 py-3 bg-stone-200/80 hover:bg-stone-300/80 text-stone-800 rounded-xl font-medium transition text-sm flex items-center gap-2">
+                        ดูประวัติเพิ่มเติม <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile Image Card -->
+            <div class="md:col-span-5 order-1 md:order-2 flex justify-center">
+                <div class="relative group w-full max-w-xs sm:max-w-sm">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-brand-200 to-amber-200 rounded-3xl blur opacity-70 group-hover:opacity-100 transition duration-500"></div>
+                    <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-stone-200 border-4 border-white shadow-xl">
+                        <!-- Image Fallback & Main Profile Image -->
+                        <img 
+                            src="https://raw.githubusercontent.com/images/profile-placeholder.jpg" 
+                            alt="ศศิประภา เพ็งจันทร์" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x800/e5d0cb/5c3327?text=Sasiprapha+P.';"
+                            class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Info Section -->
+    <section id="about" class="bg-white border-y border-stone-200/80 py-16 md:py-24">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="max-w-2xl mb-12">
+                <h2 class="text-xs uppercase font-bold tracking-widest text-brand-600 mb-2">Personal Information</h2>
+                <h3 class="text-3xl font-bold text-stone-900">ข้อมูลส่วนตัว</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Info Card 1 -->
+                <div class="p-6 rounded-2xl bg-stone-50 border border-stone-200/60 hover:border-brand-200 transition">
+                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center mb-4">
+                        <i data-lucide="user" class="w-5 h-5"></i>
+                    </div>
+                    <p class="text-xs text-stone-500 font-medium">ชื่อ-นามสกุล</p>
+                    <p class="text-base font-semibold text-stone-900 mt-1">นางสาวศศิประภา เพ็งจันทร์</p>
+                    <p class="text-xs text-stone-400 mt-1">ชื่อเล่น: นํ้า</p>
+                </div>
+
+                <!-- Info Card 2 -->
+                <div class="p-6 rounded-2xl bg-stone-50 border border-stone-200/60 hover:border-brand-200 transition">
+                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center mb-4">
+                        <i data-lucide="calendar" class="w-5 h-5"></i>
+                    </div>
+                    <p class="text-xs text-stone-500 font-medium">วันเกิด & อายุ</p>
+                    <p class="text-base font-semibold text-stone-900 mt-1">18 พฤษภาคม 2550</p>
+                    <p class="text-xs text-stone-400 mt-1">อายุ 19 ปี | สัญชาติ ไทย</p>
+                </div>
+
+                <!-- Info Card 3 -->
+                <div class="p-6 rounded-2xl bg-stone-50 border border-stone-200/60 hover:border-brand-200 transition">
+                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center mb-4">
+                        <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                    </div>
+                    <p class="text-xs text-stone-500 font-medium">สาขาวิชา</p>
+                    <p class="text-base font-semibold text-stone-900 mt-1">สาธารณสุขชุมชน</p>
+                    <p class="text-xs text-stone-400 mt-1">Community Public Health</p>
+                </div>
+
+                <!-- Info Card 4 -->
+                <div class="p-6 rounded-2xl bg-stone-50 border border-stone-200/60 hover:border-brand-200 transition">
+                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center mb-4">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    </div>
+                    <p class="text-xs text-stone-500 font-medium">งานอดิเรก</p>
+                    <p class="text-base font-semibold text-stone-900 mt-1">ดูหนัง, ฟังเพลง, อ่านหนังสือ</p>
+                    <p class="text-xs text-stone-400 mt-1">Hobbies & Activities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 md:py-24">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="max-w-2xl mb-12">
+                <h2 class="text-xs uppercase font-bold tracking-widest text-brand-600 mb-2">Abilities & Skills</h2>
+                <h3 class="text-3xl font-bold text-stone-900">ความสามารถพิเศษ</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Skill Card 1 -->
+                <div class="p-8 rounded-3xl bg-white border border-stone-200/80 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center mb-6">
+                        <i data-lucide="smile" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-stone-900 mb-3">การนันทนาการ</h4>
+                    <p class="text-stone-600 leading-relaxed font-light text-sm">
+                        มีความสามารถในการสร้างบรรยากาศที่เป็นมิตร จัดกิจกรรมนันทนาการ นำเกม ละลายพฤติกรรม เพื่อสร้างความผ่อนคลาย และกระชับความสัมพันธ์ในกลุ่มคน
+                    </p>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="p-8 rounded-3xl bg-white border border-stone-200/80 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center mb-6">
+                        <i data-lucide="megaphone" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-stone-900 mb-3">การประชาสัมพันธ์</h4>
+                    <p class="text-stone-600 leading-relaxed font-light text-sm">
+                        มีทักษะในการสื่อสารข้อมูลอย่างชัดเจน เข้าถึงง่าย เหมาะสำหรับการเผยแพร่ข้อมูลข่าวสารด้านสุขภาพ และการสื่อสารกับชุมชนอย่างมีประสิทธิภาพ
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Family Section -->
+    <section id="contact" class="bg-white border-t border-stone-200/80 py-16 md:py-24">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info -->
+                <div class="lg:col-span-7 space-y-8">
+                    <div>
+                        <h2 class="text-xs uppercase font-bold tracking-widest text-brand-600 mb-2">Get in Touch</h2>
+                        <h3 class="text-3xl font-bold text-stone-900">ช่องทางการติดต่อ</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Phone -->
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-stone-50 border border-stone-100">
+                            <div class="p-3 bg-brand-100 text-brand-700 rounded-xl">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-stone-500 font-medium">เบอร์โทรศัพท์</p>
+                                <a href="tel:0958908417" class="text-base font-semibold text-stone-900 hover:text-brand-600 transition">095-890-8417</a>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-stone-50 border border-stone-100">
+                            <div class="p-3 bg-brand-100 text-brand-700 rounded-xl">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div class="break-all">
+                                <p class="text-xs text-stone-500 font-medium">อีเมล</p>
+                                <a href="mailto:SasipraphaPengchan@gmail.com" class="text-base font-semibold text-stone-900 hover:text-brand-600 transition">SasipraphaPengchan@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-stone-50 border border-stone-100">
+                            <div class="p-3 bg-brand-100 text-brand-700 rounded-xl">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-stone-500 font-medium">ที่อยู่ปัจจุบัน</p>
+                                <p class="text-sm font-semibold text-stone-900 leading-snug mt-0.5">
+                                    บ้านเลขที่ 242 หมู่ 1 ต.ครบุรีใต้ อ.ครบุรี จ.นครราชสีมา 30250
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Links -->
+                        <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Facebook -->
+                            <a href="#" onclick="copyText('Sasiprapha Pengchan')" class="flex items-center gap-3 p-4 rounded-2xl border border-stone-200 hover:border-brand-500 hover:bg-brand-50/50 transition group">
+                                <div class="p-2.5 bg-blue-50 text-blue-600 rounded-xl">
+                                    <i data-lucide="facebook" class="w-5 h-5"></i>
+                                </div>
+                                <div class="truncate">
+                                    <p class="text-xs text-stone-500">Facebook</p>
+                                    <p class="text-sm font-semibold text-stone-900 group-hover:text-brand-600 truncate">Sasiprapha Pengchan</p>
+                                </div>
+                            </a>
+
+                            <!-- Instagram -->
+                            <a href="#" onclick="copyText('sxsipxa_pxng')" class="flex items-center gap-3 p-4 rounded-2xl border border-stone-200 hover:border-brand-500 hover:bg-brand-50/50 transition group">
+                                <div class="p-2.5 bg-pink-50 text-pink-600 rounded-xl">
+                                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                                </div>
+                                <div class="truncate">
+                                    <p class="text-xs text-stone-500">Instagram</p>
+                                    <p class="text-sm font-semibold text-stone-900 group-hover:text-brand-600 truncate">sxsipxa_pxng</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family Info -->
+                <div id="family" class="lg:col-span-5 bg-stone-50 p-8 rounded-3xl border border-stone-200/80 h-fit space-y-6">
+                    <div>
+                        <h2 class="text-xs uppercase font-bold tracking-widest text-brand-600 mb-1">Background</h2>
+                        <h3 class="text-2xl font-bold text-stone-900">ข้อมูลครอบครัว</h3>
+                    </div>
+
+                    <div class="space-y-6 divide-y divide-stone-200/60">
+                        <!-- Father -->
+                        <div class="pt-2 space-y-2">
+                            <div class="flex items-center gap-2 text-stone-900 font-semibold">
+                                <i data-lucide="user-check" class="w-4 h-4 text-brand-600"></i>
+                                <span>ข้อมูลบิดา</span>
+                            </div>
+                            <div class="text-sm space-y-1 text-stone-600 pl-6">
+                                <p><span class="text-stone-400">ชื่อ-สกุล:</span> นายรวัชชัย เพ็งจันทร์</p>
+                                <p><span class="text-stone-400">อาชีพ:</span> เกษตรกร</p>
+                            </div>
+                        </div>
+
+                        <!-- Mother -->
+                        <div class="pt-6 space-y-2">
+                            <div class="flex items-center gap-2 text-stone-900 font-semibold">
+                                <i data-lucide="user-check" class="w-4 h-4 text-brand-600"></i>
+                                <span>ข้อมูลมารดา</span>
+                            </div>
+                            <div class="text-sm space-y-1 text-stone-600 pl-6">
+                                <p><span class="text-stone-400">ชื่อ-สกุล:</span> นางสาวจรัสศรี ลาภกระโทก</p>
+                                <p><span class="text-stone-400">เบอร์โทร:</span> 088-044-4981</p>
+                                <p><span class="text-stone-400">อาชีพ:</span> เกษตรกร</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Notification Box -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-stone-900 text-white px-5 py-3 rounded-xl shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-3 text-sm z-50">
+        <i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i>
+        <span id="toast-message">คัดลอกข้อความแล้ว</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-400 py-8 text-center text-xs">
+        <div class="max-w-5xl mx-auto px-6 space-y-2">
+            <p>© 2026 Sasiprapha Pengchan. All rights reserved.</p>
+            <p class="text-stone-500">ออกแบบและสร้างเว็บไซต์ด้วย Tailwind CSS | รองรับ Github Pages</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Copy Text Function
+        function copyText(text) {
+            // Using execCommand for iframe compatibility
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            showToast('คัดลอก "' + text + '" เรียบร้อยแล้ว');
+        }
+
+        // Show Toast Notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            toastMessage.textContent = message;
+            
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
